@@ -5,12 +5,13 @@ public class Main {
         String[] kurs = {"USA", "United States", "15000"};
         String[] kurs1 = {"MY", "Malaysia", "2000"};
         String[] kurs2 = {"CAN", "Canada", "4000"};
-        Money.addMoney(kurs);
-        Money.addMoney(kurs1);
-        Money.addMoney(kurs2);
-        System.out.println(Money.findAll());
-        System.out.println(Money.findOne("MY"));
-        System.out.println(Money.remove("CAN"));
-        System.out.println(Money.findAll());
+
+        MoneyService.addMoney(kurs);
+        MoneyService.addMoney(kurs1);
+        MoneyService.addMoney(kurs2);
+
+        MoneyService.remove("CAN");
+        System.out.println(MoneyService.findAll());
+        System.out.println(MoneyService.findOne("USA"));
     }
 }
